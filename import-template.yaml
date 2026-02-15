@@ -1,0 +1,9 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Import existing S3 bucket
+
+Resources:
+  ImportedAppBucket:  # ← ONLY the resource being imported
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Retain  # ← REQUIRED for imports
+    Properties:
+      BucketName: appjerwo-demo-test

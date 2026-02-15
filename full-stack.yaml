@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Stack with imported bucket + new resources
+
+Resources:
+  ImportedAppBucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Retain  # ← Keep this!
+    Properties:
+      BucketName: appjerwo-demo-test
+
+  NewS3Bucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Delete  # ← Optional (default is Delete)
+    Properties:
+      BucketName: myjerwo-new-bucket-2026
