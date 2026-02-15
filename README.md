@@ -17,7 +17,7 @@ aws cloudformation execute-change-set \
   --stack-name my-app-stack \
   --change-set-name import-bucket --region ap-southeast-2
 
-# Standard update (NOT import!)
+## Standard deployment
 
 aws cloudformation deploy \
   --stack-name my-app-stack \
